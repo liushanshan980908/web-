@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>计算器</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		.tr1{
+			width:80px;
+			height: 70px;
+			background-color: #eeeeee;
+			text-align: center;
+			font-size: 2em;
+		}
+		.tr2{
+			text-align: right;
+			font-size: 3em;
+		}
+	</style>
+	<script type="text/javascript" src="js/homework3.js">
+	</script>
+</head>
+<body>
+<form>
+	<table border="1" height="500px" width="500px" cellspacing="5px" cellpadding="13px">
+		<tr>
+			<td colspan="3" id="result" class="tr2"></td>
+			<td><input type="button" value="c" class="tr1" onclick="clearData();"/></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="1" class="tr1" id="1" onclick="showData(1);"/></td>
+			<td><input type="button" value="2" class="tr1" id="2" onclick="showData(2);"/></td>
+			<td><input type="button" value="3" class="tr1" id="3" onclick="showData(3);"/></td>
+			<td><input type="button" value="+" class="tr1" id='+' onclick="showData('+');"/></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" class="tr1" id="4" onclick="showData(4);"/></td>
+			<td><input type="button" value="5" class="tr1" id="5" onclick="showData(5);"/></td>
+			<td><input type="button" value="6" class="tr1" id="6" onclick="showData(6);"/></td>
+			<td><input type="button" value="-" class="tr1" id='-' onclick="showData('-');"/></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" class="tr1" id="7" onclick="showData(7);"/></td>
+			<td><input type="button" value="8" class="tr1" id="8" onclick="showData(8);"/></td>
+			<td><input type="button" value="9" class="tr1" id="9" onclick="showData(9);"/></td>
+			<td><input type="button" value="*" class="tr1" id='*' onclick="showData('*');"/></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="0" class="tr1" id="0" onclick="showData(0);"/></td>
+			<td><input type="button" value="." class="tr1" id='.' onclick="showData('.');"/></td>
+			<td><input type="button" value="=" class="tr1" id='=' onclick="calculate();"/></td>
+			<td><input type="button" value="/" class="tr1" id='/' onclick="showData('/');"/></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
