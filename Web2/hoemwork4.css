@@ -1,0 +1,14 @@
+#warp{
+	height:200px;
+	width:400px;
+}
+p{
+	background-image:url("images/bg.jpg");
+	font-size: 15px;
+}
+.select{
+	text-align: right;
+}
+.input{
+	float:right;
+}
