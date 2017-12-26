@@ -1,0 +1,28 @@
+#wrap{
+	background-image: url("../images/1.jpg");
+	width:1300px;
+	height:625px;
+	margin-left: 30px;
+	margin-top: 25px;
+	background-repeat: no-repeat;
+}
+#smallpic{
+    height:120px; 
+    padding-left: 275px;
+    padding-top: 20px;
+}
+img{
+ 	float:left; 
+    margin-right:10px; 
+    margin-bottom:10px;
+}
+#smallpic img:hover{
+    cursor:pointer; /*设定鼠标的形状为小手*/
+}
+#bigpic{
+	padding-left: 250px;
+	padding-top: 20px;
+}
+.pb{
+    border:3px solid #14c3fd;
+} 

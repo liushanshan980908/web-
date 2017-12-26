@@ -3,24 +3,90 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
-	<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+	<style type="text/css">
+	.color{
+		color:red
+	}
+	</style>
+	<script src="jquery-3.2.1.slim.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 			$(document).ready(function(){
 				var userName = $('input[name="username"]');
+				var sp=document.getElementsByTagName('span');
 				userName.blur(function(){
 					var userName = $('input[name="username"]');
-					if(userName.val()=='0')
+					if(userName.val()=="")
 					{
-						var span1=$('<span>用户名不能为空</span>');		
-						userName.after(span1);			
+						if(sp.length>2)
+						{
+							sp[0].remove();	
+							var span1=$('<span class="color">用户名不能为空</span>');		
+							userName.after(span1);						
+						}		
+					}
+					else
+					{
+						if(sp.length>2)
+						{
+							sp[0].remove();
+							var span2=$('<span></span>');
+							userName.after(span2);
+						}
+					}
+				})
+				var passw=$('input[name="pasw"]');
+				passw.blur(function(){
+					var passw=$('input[name="pasw"]');
+					if(passw.val()=="")
+					{
+						if(sp.length>2)
+						{
+							sp[1].remove();						
+						}
+						var span1=$('<span class="color">密码不能为空</span>');		
+						passw.after(span1);			
+					}
+					else
+					{
+						if(sp.length>2)
+						{
+							sp[1].remove();
+							var span2=$('<span></span>');
+							passw.after(span2);
+						}
+					}
+				})
+				var passw1=$('input[name="ripasw"]');
+				passw1.blur(function(){
+					var passw1=$('input[name="ripasw"]');
+					var passw=$('input[name="pasw"]');
+					if(passw.val()!=passw1.val())
+					{
+						if(sp.length>2)
+						{
+							sp[2].remove();						
+						}
+						var span1=$('<span class="color">密码和确认密码不一致</span>');		
+						passw1.after(span1);							
+					}
+					else
+					{
+						if(sp.length>2)
+						{
+							sp[2].remove();
+							var span2=$('<span></span>');
+							passw1.after(span2);
+						}
 					}
 				})
 			})
 	</script>
 </head>
 <body>
-用户名:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username" id="username"><span id="errorTip"></span><br/>
-密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="pasw" id="password"><br/>
-确认密码：<input type="password" name="ripasw" id="ripasw"><br/>
+用户名:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username" id="username"><span></span><br/>
+密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="pasw" id="password"><span></span><br/>
+确认密码：<input type="password" name="ripasw" id="ripasw"><span></span><br/>
+<input type="button" value="注册">
+<input type="button" value="登录">
 </body>
 </html>

@@ -1,0 +1,27 @@
+#wrap{
+	background-image: url("../images/1.jpg");
+	width:1300px;
+	height:625px;
+	margin-top: 25px;
+	background-repeat: no-repeat;
+}
+#nav{
+	display: inline;
+	padding-left: 350px;
+	position: absolute;
+	top:200px;
+}
+#nav1{
+	width:600px;
+	padding-left: 675px;
+	position: absolute;
+	top:200px;
+	color:white;
+	display: inline;
+}
+.move{
+	margin-left: 40px;
+}
+.color{
+	color:red;
+}
