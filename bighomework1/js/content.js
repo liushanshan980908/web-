@@ -32,6 +32,6 @@ window.onload = function(){
 	}
     var $cr=$("#li");
 	$cr.click(function(){
-		window.location.href = "content1.html";
+		window.location.href = "https://github.com/liushanshan980908/web-/blob/master/bighomework1/content1.html";
 	})
 }
