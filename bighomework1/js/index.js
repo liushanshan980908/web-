@@ -97,7 +97,7 @@ $(document).ready(function(){
 	$cr.click(function(){
 		if(phone.val()!="" && phone.val().length==11 && email.val()!="" && Id.val()!="" && passw.val()!="")
 		{
-			window.location.href = "content.html";
+			window.location.href = "https://htmlpreview.github.io/?https://github.com/liushanshan980908/web-/blob/master/bighomework1/content.html";
 		}
 		else
 		{
